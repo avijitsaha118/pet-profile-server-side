@@ -6,9 +6,7 @@ const port = process.env.port || 5000;
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 app.use(express.json());
 
 
@@ -76,5 +74,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('listening to port', port);
+    console.log('listening to port 5000', port);
 })
